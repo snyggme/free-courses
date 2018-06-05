@@ -1,10 +1,6 @@
 var process = require('process');
 
-var str = '';
-
-for (var i = 2; i < process.argv.length; i++) {
-	str = str.concat(process.argv[i]);
-}
+var str = process.argv.slice(2).join('');
 
 function isPalindrom(str) {
 
