@@ -1,5 +1,11 @@
 var process = require('process');
 
+var str = '';
+
+for (var i = 2; i < process.argv.length; i++) {
+	str = str.concat(process.argv[i]);
+}
+
 function isPalindrom(str) {
 
 	var front = 0;
@@ -25,4 +31,4 @@ function isPalindrom(str) {
   	return "YES";
 };
 
-process.stdout.write(isPalindrom(process.argv[2]));
+process.stdout.write(isPalindrom(str));
